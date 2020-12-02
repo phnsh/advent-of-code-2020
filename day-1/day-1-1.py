@@ -7,8 +7,8 @@ nums = input_file.readlines()
 
 counter = 0
 for i in nums:
-	for j in nums[counter + 1:]:
-		if (i + j) == 2020:
-			print(i * j)
-			break
-	counter += 1
+    for j in nums[counter + 1:]:
+        if (i + j) == 2020:
+            print(i * j)
+            break
+    counter += 1

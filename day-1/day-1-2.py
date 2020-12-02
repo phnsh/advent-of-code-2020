@@ -11,15 +11,15 @@ counter = 0
 
 inner_counter = 2
 for i in nums:
-	for j in nums[counter + 1:]:
-		for k in nums[inner_counter:]:
-			i = int(i)
-			j = int(j)
-			k = int(k)
-			if (i + j + k) == 2020:
-				print(i, '+', j, '+', k, '=', (i + j + k))
-				print(i, '*', j, '*', k, '=', (i * j * k))
-		inner_counter += 1
-	counter += 1
-	inner_counter = 2 + counter
+    for j in nums[counter + 1:]:
+        for k in nums[inner_counter:]:
+            i = int(i)
+            j = int(j)
+            k = int(k)
+            if (i + j + k) == 2020:
+                print(i, '+', j, '+', k, '=', (i + j + k))
+                print(i, '*', j, '*', k, '=', (i * j * k))
+        inner_counter += 1
+    counter += 1
+    inner_counter = 2 + counter
 
