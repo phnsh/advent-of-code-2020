@@ -1,7 +1,3 @@
-# terrain = '1'
-terrain = '012345678'
-
-
 f = open('../inputs/day-3.txt', 'r')
 # lines = f.readlines()
 # print(len(lines))
