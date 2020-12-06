@@ -1,6 +1,6 @@
 # https://adventofcode.com/2020/day/2
 
-input_file = open('inputs/day-2.txt', 'r')
+input_file = open('../inputs/day-2.txt', 'r')
 lines = input_file.readlines()
 
 valid_passwords = 0

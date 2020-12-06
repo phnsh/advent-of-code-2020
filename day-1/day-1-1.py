@@ -1,6 +1,6 @@
 # https://adventofcode.com/2020/day/1
 
-input_file = open('inputs/day-1.txt', 'r')
+input_file = open('../inputs/day-1.txt', 'r')
 nums = input_file.readlines()
 # nums = [1721,979,366,299,675,1456]
 # print(nums)
