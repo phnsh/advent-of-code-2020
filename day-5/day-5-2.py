@@ -26,10 +26,14 @@ def fold(line):
 			column = lower
 	return (row * 8) + column
 
+
 with open('../inputs/day-5.txt') as f:
-	highest_id = 0
+	seat_set = {1,2,4,6}
+	diff = 0
 	for line in f:
-		id = fold(line.strip())
-		if id > highest_id:
-			highest_id = id
-	print('highest id:', highest_id)
+		seat_set.add(fold(line.strip()))
+	for i in seat_set:
+		temp = i - diff
+		if temp > 1:
+			print(i, ": ", temp)
+		diff = i
