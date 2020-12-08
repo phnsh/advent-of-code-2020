@@ -1,7 +1,5 @@
 # TODO
 def fold(line):
-    # print(line)
-    total_seats = 128
     lower = 0
     higher = 128
     row = 0
@@ -14,7 +12,6 @@ def fold(line):
             lower = (lower + higher) // 2
             row = lower
 
-    total_seats = 8
     lower = 0
     higher = 8
     for i in line[-3:]:

@@ -1,7 +1,6 @@
 # TODO
 def fold(line):
     # print(line)
-    total_seats = 128
     lower = 0
     higher = 128
     row = 0
@@ -14,7 +13,6 @@ def fold(line):
             lower = (lower + higher) // 2
             row = lower
 
-    total_seats = 8
     lower = 0
     higher = 8
     for i in line[-3:]:
@@ -28,7 +26,7 @@ def fold(line):
 
 
 with open('../inputs/day-5.txt') as f:
-    seat_set = {1,2,4,6}
+    seat_set = set()
     diff = 0
     for line in f:
         seat_set.add(fold(line.strip()))
