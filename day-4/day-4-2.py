@@ -29,23 +29,14 @@ rules = {
     'pid': (lambda a: 1 if len(a) == 9 else 0)
 }
 
-# print(rules['ecl']('wawt'))
-
-# exit()
 def field_validator(fields):
-    # print(fields.split(' '))
-    # fields = fields.split(' ')
     for f in fields.split(' '):
         if len(f) > 0:
-            # print(f.split(':')[0])
-            # print(f)
             key = f.split(':')[0]
             value = f.split(':')[1]
-            # print(key, value)
             
             if key == 'cid':
                 continue
-            # print(key, value, rules[key](value))
             if rules[key](value) == 1:
                 continue
             else:
@@ -54,40 +45,28 @@ def field_validator(fields):
 
 
 def process_data(data):
-    # required_fields = ['byr','iyr','eyr','hgt','hcl','ecl','pid','cid']
     metrics = data.split(' ')
-    # print(data.split(' '))
-    # field_validator(metrics)
-    # for m in metrics:
-    # 	print(m)
     if data.count(':') == 8:
-        # print("valid")
-        # field_validator(data)
         return field_validator(data)
     elif data.count(':') == 7:
         if 'cid' in data:
             return 0
         else:
-            # print("valid")
             return field_validator(data)
     else:
-        # print("invalid")
         return 0
 
 
 valid_pw = 0
+
 with open('../inputs/day-4.txt') as f:
     data = ''
     counter = 0
     for line in f:
-        # print(line.strip().split('\n'))
         if line.strip().split('\n')[0] == '':
             valid_pw += process_data(data)
-            # print(data)
-            # exit()
             data = ''
             continue
-        # data += line.strip().split('\n')[0] + '\n'
         data += line.replace('\n', ' ')
         
 print(valid_pw)
